@@ -1,0 +1,145 @@
+/* STYLING AND FORMATTING for swimming fish */
+
+.sea {
+	width: 150px;
+	height: 100px;
+	padding: 0;
+	margin: 0 auto;	
+}
+.tail {
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-left: 25px solid #FF9000;
+	border-bottom: 10px solid transparent;
+	margin-top:100px;
+	opacity: .8;
+	-webkit-animation: swimtail .5s ease-in-out infinite;
+			animation: swimtail .5s ease-in-out infinite;
+}
+
+.fish-body {
+	width: 60px;
+	height: 30px;
+	background-image: linear-gradient(-180deg, #FFB75A 0%, #FF9000 100%);
+	border-bottom: 2px solid #DE902A;
+	-moz-border-radius: 100px / 50px;
+	-webkit-border-radius: 100px / 50px;
+	border-radius: 100px / 50px;
+	margin-top: -25px;
+	margin-left: 15px;
+	opacity: .8;
+	-webkit-transform-origin: left;
+	    -ms-transform-origin: left;
+	        transform-origin: left;
+	-webkit-animation: swim .8s ease-in-out infinite;
+			animation: swim .8s ease-in-out infinite;
+}
+
+
+.eye {
+	width: 6px;
+	height: 6px;
+	background: white;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	margin-top: -20px;
+	margin-left: 60px;
+	-webkit-animation: swimeye .8s ease-in-out infinite;
+			animation: swimeye .8s ease-in-out infinite;
+}
+
+.eye-detail {
+	width: 3px;
+	height: 3px;
+	background: black;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	margin-top: -4px;
+	margin-left: 63px;
+	opacity: .6;
+	-webkit-animation: swimeye .8s ease-in-out infinite;
+			animation: swimeye .8s ease-in-out infinite;
+}
+
+.bubble {
+	width: 15px;
+	height: 15px;
+	background: #B4F0FF;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+}
+
+.bubble.a {
+	margin-left: 85px;
+	margin-top: -30px;
+	-webkit-animation: bubble 3.5s ease-out infinite;
+			animation: bubble 3.5s ease-out infinite;
+	animation-delay: .5s;
+}
+
+.bubble.b {
+	margin-left: 110px;
+	margin-top: -40px;
+	-webkit-animation: bubble 3.5s ease-out infinite;
+			animation: bubble 3.5s ease-out infinite;
+	animation-delay: 1.5s;
+}
+
+.bubble.c {
+	margin-left: 90px;
+	margin-top: -40px;
+	-webkit-animation: bubble 3.5s ease-out infinite;
+			animation: bubble 3.5s ease-out infinite;
+	animation-delay: 2.5s;
+}
+
+/* ANIMATION EFFECTS */
+
+@-webkit-keyframes swimtail {
+	50% {
+		-webkit-transform: rotateY(-30deg); /* Safari */
+		transform: rotateY(-30deg);
+	}
+	100% {
+		-webkit-transform: rotateY(30deg); /* Safari */
+    	transform: rotateY(30deg);	
+	}
+}
+
+@-webkit-keyframes swim {
+	50% {
+		-webkit-transform: rotate(-2deg); /* Safari */
+		transform: rotate(-2deg);
+	}
+	100% {
+		-webkit-transform: rotate(0deg); /* Safari */
+    	transform: rotate(0deg);	
+	}
+}
+
+@-webkit-keyframes swimeye {
+	50% {
+		-webkit-transform: translate(0,-1px); /* Safari */
+		transform: translate(0,-1px);
+	}
+	100% {
+		-webkit-transform: translate(0,0); /* Safari */
+    	transform: translate(0,0);	
+	}
+}
+
+@-webkit-keyframes bubble {
+	0% {
+		opacity: 1;
+	}
+	86% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;	
+	}
+}
